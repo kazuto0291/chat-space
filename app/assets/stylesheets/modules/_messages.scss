@@ -9,6 +9,19 @@
   float: left;
   .side-header {
     height: 100px;
+    display: flex;
+    align-items: center;
+    &__box {
+      background-color: #333333;
+      width: 260px;
+      margin: 0 20px;
+      display: flex;
+      justify-content: space-between;
+      &__name {
+        font-size: 16px;
+      }
+      &__menu {}
+    }
   }
   .groups {
     background-color: #2f3e51;
