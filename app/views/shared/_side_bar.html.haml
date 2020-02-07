@@ -4,8 +4,10 @@
       %p.side-header__box__name
         name
       %ul.side-header__box__menu
-        %li.side-header__box__edit-use
-          ed
-        %li.side-header__box__new-group
-          ne
+        %li.side-header__box__newgroup
+          = link_to "#" do
+            = icon('fas', 'edit')
+        %li.side-header__box__edituse
+          = link_to "#" do
+            = icon('fas', 'cog')
   .groups
