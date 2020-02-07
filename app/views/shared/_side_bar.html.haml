@@ -1,8 +1,7 @@
 .chat-side
   .side-header
     .side-header__box
-      %p.side-header__box__name
-        name
+      %p.side-header__box__name name
       %ul.side-header__box__menu
         %li.side-header__box__newgroup
           = link_to "#" do
@@ -11,3 +10,5 @@
           = link_to "#" do
             = icon('fas', 'cog')
   .groups
+    %p.groups__name techcamp
+    %p.groups__last-message メッセージ
