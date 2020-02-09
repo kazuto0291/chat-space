@@ -1,0 +1,25 @@
+.chat-main
+  .main-header
+    .main-header__left-box
+      %h2.main-header__left-box__group test
+      %ul.main-header__left-box__menber
+        %li.main-header__left-box__menber__list
+          list :
+        %li.main-header__left-b0x__menber__name
+          name
+    = link_to "#", class:"main-header__edit-btn" do
+      Edit
+  .main-contents
+    .message
+      .message__box
+        %p.message__box__name name
+        %p.message__box__date 2020/02/07
+      %p.massage__text hello world
+  .main-footer
+    %form.new-massage
+      .input-box
+        %input{type: "text", class: "input-box__text", placeholder: "type a message"}
+        %label{class: "input-box__image"}
+          = icon('fas', 'image')
+          %input{type: "file", class: "input-box__image__file"}
+      %input{type: "submit", class: "submit-btn"}
