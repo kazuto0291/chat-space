@@ -38,15 +38,18 @@
     background-color: #2f3e51;
     height: calc(100vh - 100px);
     padding: 20px 20px 0;
-    color: white;
-    font-weight: bold;
-    &__name {
-      font-size: 15px;
-      margin-bottom: 5px;
-    }
-    &__last-message {
-      font-size: 11px;
-      margin-bottom: 40px;
+    .group {
+      font-weight: bold;
+      &__name {
+        font-size: 15px;
+        margin-bottom: 5px;
+        color: white;
+      }
+      &__last-message {
+        font-size: 11px;
+        margin-bottom: 40px;
+        color: white;
+      }
     }
   }
 }

@@ -1,7 +1,7 @@
 .chat-side
   .side-header
     .side-header__box
-      %p.side-header__box__name name
+      %p.side-header__box__name
       = current_user.name
       %ul.side-header__box__menu
         %li.side-header__box__newgroup
@@ -11,5 +11,10 @@
           = link_to edit_user_path(current_user) do
             = icon('fas', 'cog', class: 'icon')
   .groups
-    %p.groups__name techcamp
-    %p.groups__last-message メッセージ
+    - current_user.groups.each do |group|
+      .group
+        = link_to '#' do
+          .group__name
+            = group.name
+          .group__last-message
+            メッセージはありません
