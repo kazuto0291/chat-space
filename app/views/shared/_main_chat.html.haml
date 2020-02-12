@@ -1,21 +1,23 @@
 .chat-main
   .main-header
     .main-header__left-box
-      %h2.main-header__left-box__group test
+      %h2.main-header__left-box__group
+        =@group.name
       %ul.main-header__left-box__menber
         %li.main-header__left-box__menber__list
           list :
         %li.main-header__left-b0x__menber__name
-          name
+        - @group.users.each do |user|
+          =user.name
     = link_to "#", class:"main-header__edit-btn" do
       Edit
   .main-contents
     = render @messages
     -# .message
     -#   .message__box
-        -# %p.message__box__name name
-        -# %p.message__box__date 2020/02/07
-      -# %p.massage__text hello world
+    -#     %p.message__box__name name
+    -#     %p.message__box__date 2020/02/07
+    -#   %p.massage__text hello world
   .main-footer
     .form.new-massage
       = form_for [@group, @message] do |f|
