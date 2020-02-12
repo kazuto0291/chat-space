@@ -9,8 +9,7 @@
         %li.main-header__left-b0x__menber__name
         - @group.users.each do |user|
           =user.name
-    = link_to "#", class:"main-header__edit-btn" do
-      Edit
+    = link_to "Edit", edit_group_path(@group), class:"main-header__edit-btn"
   .main-contents
     = render @messages
     -# .message
