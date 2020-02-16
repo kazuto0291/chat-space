@@ -5,7 +5,7 @@ $(function(){
         `<div class="message" data-message-id=${message.id}>
           <div class="message__box">
             <div class="message__box__name">
-              ${message.user_mame}
+              ${message.name}
             </div>
             <div class="message__box__date">
               ${message.created_at}
@@ -24,7 +24,7 @@ $(function(){
         `<div class="message" data-message-id=${message.id}>
           <div class="message__box">
             <div class="message__box__name">
-              ${message.user_mame}
+              ${message.name}
             </div>
           <div class="message__box__date">
             ${message.created_at}
@@ -55,8 +55,13 @@ $(function(){
 
     .done(function(data) {
       var html = buildHTML(data);
-      $('.main-contents').append(html)
-      
+      $('.main-contents').append(html);
+      $('form')[0].reset();
+      $(".submit-btn").prop("disabled", false);
+      $('.main-contents').animate({ scrollTop: $('.main-contents')[0].scrollHeight});
     })
-  })
+    .fail(function() {
+      alert("メッセージ送信に失敗しました");
+    });
+  });
 });
