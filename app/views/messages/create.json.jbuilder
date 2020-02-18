@@ -4,3 +4,4 @@ json.content @message.content
 json.image @message.image_url
 
 #右から左に読み替えられる
+json.id @message.id
