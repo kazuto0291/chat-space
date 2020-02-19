@@ -46,7 +46,7 @@ $(function(){
       `<div class="message" data-message-id=${message.id}>
         <div class="message__box">
           <div class="message__box__name">
-            ${message.user_name}
+            ${message.name}
           </div>
           <div class="message__box__date">
             ${message.created_at}
